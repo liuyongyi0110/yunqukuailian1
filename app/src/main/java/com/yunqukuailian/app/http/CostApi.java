@@ -1,6 +1,7 @@
 package com.yunqukuailian.app.http;
 
 import com.yunqukuailian.app.model.BaseBean;
+import com.yunqukuailian.app.model.MyFirstFragmentBean;
 
 import java.util.Map;
 
@@ -12,7 +13,7 @@ import rx.Observable;
  * Created by Administrator on 2018/3/1/001.
  */
 
-interface CostApiBase {
-    @PUT("")
-    Observable<BaseBean> constat(@QueryMap Map<String,String> map);
+public interface CostApi {
+    @PUT("teacherPubCoursePages.do")
+    Observable<MyFirstFragmentBean> getTeacherPubCoursePage(@QueryMap Map<String,String> map);
 }

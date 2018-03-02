@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
-
     @BindView(R.id.fragmentmain)
     FrameLayout fragmentmain;
     @BindView(R.id.radio1)
