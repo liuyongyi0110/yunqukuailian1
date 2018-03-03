@@ -1,38 +1,36 @@
 package com.yunqukuailian.app.model;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 /**
  * Created by android on 2018/3/2.
  */
 
-public class MyFirstFragmentBean extends BaseBean{
+public class MyFirstFragmentBean{
+
 
     /**
-     * map : {"list":[{"fid":"7708C4D9-A138-41B3-9EC0-7053EC8BB93A","fname":"全脑开发学中文","fteacherintroduce":" 无论是海外的中文教学还是中国国内的语文教学，都离不开汉语语音、词法、语法等的教学。有没有一种教学法能够让老师在教学中产生奇效，让学生的学习效率有一极大地提高呢？任京生创造的汉语形象教学法在美国、加拿大、中国的许多国际研讨会、大中小学、教育机构等做过宣讲，引起普遍重视。一些老师说：\u201c我教了几十年中文，也没想到中文还能用这种方法教。\u201d一些学生激动地说：\u201c从来没有老师这么教过我们。这个问题我过去总也搞不懂，经您这样一说我就全懂了。\u201d\n       汉语形象教学法是怎样取得这样好的效果的呢？是通过形象比喻、自我创造、图像显示等十余种方法巧妙地将抽象的理论转换为生动的形象，从而将复杂难懂的问题变得简单、有趣和生动。\n      众所周知，人的大脑分左脑、右脑。左脑是负责逻辑思维、抽象思维、语言学习与运用等；右脑是负责形象思维、联想、图像、音乐、创造性思维、超高速记忆等。右脑的信息容量是左脑的十万倍，但人们平时学习语言却主要使用左脑，将右脑闲置。\n       形象教学法巧妙之处就在于根据人脑的结构理论将抽象变为形象，从而开发了右脑，让全脑配合一起来学习，从而达到三种结果：在理解上茅塞顿开、恍然大悟，在记忆上效率倍增、牢记不忘，在思维上启发创新、开启智慧之门。这实际上也是一种翻译法，正像你和人们说英文人们不懂，你翻译成中文人家就懂了一样。这种教学法不仅适用于海外的中文教学，也特别适合于中国的语文教学。\n       任京生大学中文系毕业，在中国国内曾参加过中央讲师团主教过汉语。2000年赴美国俄亥俄州立大学（Ohio State University）东亚系做访问学者，该校是美国汉语教学界的一面旗帜，全美东亚语言中心、美国国家汉旗舰项目、美国唯一的中文教学法博士点均挂靠在该校。他还在美国西东大学（Seton Hall University）亚洲学系获得对外汉语教学专业硕士学位，并长期在北美一些中文学校等教育机构从事教学工作。另外，他还喜爱发明创造，曾获得过三十多项专利。\n       因此，这套形象教学法，是他根据多年的理论研究、实际教学经验，进行东西方教学比较，运用搞发明的创造性思维，等等多方位跨界，总结出来的一套教学创新成果。他在新出版的《全脑开发学中文\u2014\u2014汉语形象教学宝典》一书中，对此作了全面的阐述。","fphoto":"BF352ECC-54B9-424C-BF42-2121DEA51E3A","fphotopath":"http://api.1000classes.com/youpinserver/attachment/2018-01/bf352ecc-54b9-424c-bf42-2121dea51e3a.jpg","fteachingexp":"","fproducername":"全脑开发学中文","fshareurl":"http://app.1000classes.com/html/org/orgDetail.html?","fsharetitle":"全脑开发学中文","fsharedesc":" 无论是海外的中文教学还是中国国内的语文教学，都离不开汉语语音、词法、语法等的教学。有没有一种教学法能够让老师在教学中产生奇效，让学生的学习效率有一极大地提高呢？任京生创造的汉语形象教学法在美国、加拿大、中国的许多国际研讨会、大中小学、教育机构等做过宣讲，引起普遍重视。一些老师说：\u201c我教了几十年中文，也没想到中文还能用这种方法教。\u201d一些学生激动地说：\u201c从来没有老师这么教过我们。这个问题我过去总也搞不懂，经您这样一说我就全懂了。\u201d\n       汉语形象教学法是怎样取得这样好的效果的呢？是通过形象比喻、自我创造、图像显示等十余种方法巧妙地将抽象的理论转换为生动的形象，从而将复杂难懂的问题变得简单、有趣和生动。\n      众所周知，人的大脑分左脑、右脑。左脑是负责逻辑思维、抽象思维、语言学习与运用等；右脑是负责形象思维、联想、图像、音乐、创造性思维、超高速记忆等。右脑的信息容量是左脑的十万倍，但人们平时学习语言却主要使用左脑，将右脑闲置。\n       形象教学法巧妙之处就在于根据人脑的结构理论将抽象变为形象，从而开发了右脑，让全脑配合一起来学习，从而达到三种结果：在理解上茅塞顿开、恍然大悟，在记忆上效率倍增、牢记不忘，在思维上启发创新、开启智慧之门。这实际上也是一种翻译法，正像你和人们说英文人们不懂，你翻译成中文人家就懂了一样。这种教学法不仅适用于海外的中文教学，也特别适合于中国的语文教学。\n       任京生大学中文系毕业，在中国国内曾参加过中央讲师团主教过汉语。2000年赴美国俄亥俄州立大学（Ohio State University）东亚系做访问学者，该校是美国汉语教学界的一面旗帜，全美东亚语言中心、美国国家汉旗舰项目、美国唯一的中文教学法博士点均挂靠在该校。他还在美国西东大学（Seton Hall University）亚洲学系获得对外汉语教学专业硕士学位，并长期在北美一些中文学校等教育机构从事教学工作。另外，他还喜爱发明创造，曾获得过三十多项专利。\n       因此，这套形象教学法，是他根据多年的理论研究、实际教学经验，进行东西方教学比较，运用搞发明的创造性思维，等等多方位跨界，总结出来的一套教学创新成果。他在新出版的《全脑开发学中文\u2014\u2014汉语形象教学宝典》一书中，对此作了全面的阐述。"}],"list1":[],"result":1,"msg":"成功","totalsize":0,"totalpage":0}
+     * map : {"list":[{"fid":"58C5FC4E-2E1C-41A1-8075-55B804FB8979","fname":"启明星中小学课后辅导","fteacherintroduce":"启明星中小学课后辅导是一家专门针对中小学全科型课后辅导的教育机构，成立于2013年7月，至今已有四年时间。这四年来，通过我们的耐心辅导，大批学生的成绩有了显著提高，同时我们也得到了学生以及家长的充分认可。\n我们本着认真负责的原则，有针对性的对每个孩子进行全面辅导。注重传授学习方法，培养孩子良好的学习习惯，提高孩子的学习成绩。同时采用多种奖励制度，让孩子爱上学习、自主学习，在轻松快乐中学有所获！\n目前机构已经全面开通网络在线小班授课，云集全国重点大学优秀在校大学生加强我们的师资力量，欢迎各位同学加入启明星，为你们的父母交上一份满意的答卷。","fphoto":"12214A7D-0FB3-4D28-A128-2C5A82F87618","fphotopath":"http://api.1000classes.com/youpinserver/attachment/2018-01/12214a7d-0fb3-4d28-a128-2c5a82f87618.jpg","fteachingexp":"","fproducername":"启明星中小学课后辅导","fshareurl":"http://app.1000classes.com/html/org/orgDetail.html?","fsharetitle":"启明星中小学课后辅导","fsharedesc":"启明星中小学课后辅导是一家专门针对中小学全科型课后辅导的教育机构，成立于2013年7月，至今已有四年时间。这四年来，通过我们的耐心辅导，大批学生的成绩有了显著提高，同时我们也得到了学生以及家长的充分认可。\n我们本着认真负责的原则，有针对性的对每个孩子进行全面辅导。注重传授学习方法，培养孩子良好的学习习惯，提高孩子的学习成绩。同时采用多种奖励制度，让孩子爱上学习、自主学习，在轻松快乐中学有所获！\n目前机构已经全面开通网络在线小班授课，云集全国重点大学优秀在校大学生加强我们的师资力量，欢迎各位同学加入启明星，为你们的父母交上一份满意的答卷。"}],"list1":[{"fid":"D97E571E-2481-4A05-8DE2-5043931205F1","fname":"启明星千课教育盒子","fcoursetypeid":"36968C73-F84B-4F91-B9E3-7853FC0190EB","flearningobj":"千课教育盒子是面向学生专门推出的一款学习\u201c神器\u201d","fmoney":"520.0","fcusttotal":"284","fstorename":"http://api.1000classes.com/youpinserver/attachment/2017-12/e77ec025-2afa-4338-8698-ca187c1cfc31.jpg","flessionnum":"1","fcreatetime":"2017-12-18 16:35:25.103","ftype":"1","fstatus":"1","mark":"75天前","fisauto":"0","fcustname":"没有背景、只有背影","fcustphoto":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ2Ynhnd93otKickwQqf7AJT1BSzZMzJ5EUw8UyWEibe74VQL0kVOJQUsm7doLDggTjJqo0hxEtHl4A/0","rownumber":"1"}],"result":1,"msg":"成功","totalsize":1,"totalpage":1}
      */
 
-    @SerializedName("map")
-    private MapBean mapX;
+    private MapBean map;
 
-    public MapBean getMapX() {
-        return mapX;
+    public MapBean getMap() {
+        return map;
     }
 
-    public void setMapX(MapBean mapX) {
-        this.mapX = mapX;
+    public void setMap(MapBean map) {
+        this.map = map;
     }
 
     public static class MapBean {
         /**
-         * list : [{"fid":"7708C4D9-A138-41B3-9EC0-7053EC8BB93A","fname":"全脑开发学中文","fteacherintroduce":" 无论是海外的中文教学还是中国国内的语文教学，都离不开汉语语音、词法、语法等的教学。有没有一种教学法能够让老师在教学中产生奇效，让学生的学习效率有一极大地提高呢？任京生创造的汉语形象教学法在美国、加拿大、中国的许多国际研讨会、大中小学、教育机构等做过宣讲，引起普遍重视。一些老师说：\u201c我教了几十年中文，也没想到中文还能用这种方法教。\u201d一些学生激动地说：\u201c从来没有老师这么教过我们。这个问题我过去总也搞不懂，经您这样一说我就全懂了。\u201d\n       汉语形象教学法是怎样取得这样好的效果的呢？是通过形象比喻、自我创造、图像显示等十余种方法巧妙地将抽象的理论转换为生动的形象，从而将复杂难懂的问题变得简单、有趣和生动。\n      众所周知，人的大脑分左脑、右脑。左脑是负责逻辑思维、抽象思维、语言学习与运用等；右脑是负责形象思维、联想、图像、音乐、创造性思维、超高速记忆等。右脑的信息容量是左脑的十万倍，但人们平时学习语言却主要使用左脑，将右脑闲置。\n       形象教学法巧妙之处就在于根据人脑的结构理论将抽象变为形象，从而开发了右脑，让全脑配合一起来学习，从而达到三种结果：在理解上茅塞顿开、恍然大悟，在记忆上效率倍增、牢记不忘，在思维上启发创新、开启智慧之门。这实际上也是一种翻译法，正像你和人们说英文人们不懂，你翻译成中文人家就懂了一样。这种教学法不仅适用于海外的中文教学，也特别适合于中国的语文教学。\n       任京生大学中文系毕业，在中国国内曾参加过中央讲师团主教过汉语。2000年赴美国俄亥俄州立大学（Ohio State University）东亚系做访问学者，该校是美国汉语教学界的一面旗帜，全美东亚语言中心、美国国家汉旗舰项目、美国唯一的中文教学法博士点均挂靠在该校。他还在美国西东大学（Seton Hall University）亚洲学系获得对外汉语教学专业硕士学位，并长期在北美一些中文学校等教育机构从事教学工作。另外，他还喜爱发明创造，曾获得过三十多项专利。\n       因此，这套形象教学法，是他根据多年的理论研究、实际教学经验，进行东西方教学比较，运用搞发明的创造性思维，等等多方位跨界，总结出来的一套教学创新成果。他在新出版的《全脑开发学中文\u2014\u2014汉语形象教学宝典》一书中，对此作了全面的阐述。","fphoto":"BF352ECC-54B9-424C-BF42-2121DEA51E3A","fphotopath":"http://api.1000classes.com/youpinserver/attachment/2018-01/bf352ecc-54b9-424c-bf42-2121dea51e3a.jpg","fteachingexp":"","fproducername":"全脑开发学中文","fshareurl":"http://app.1000classes.com/html/org/orgDetail.html?","fsharetitle":"全脑开发学中文","fsharedesc":" 无论是海外的中文教学还是中国国内的语文教学，都离不开汉语语音、词法、语法等的教学。有没有一种教学法能够让老师在教学中产生奇效，让学生的学习效率有一极大地提高呢？任京生创造的汉语形象教学法在美国、加拿大、中国的许多国际研讨会、大中小学、教育机构等做过宣讲，引起普遍重视。一些老师说：\u201c我教了几十年中文，也没想到中文还能用这种方法教。\u201d一些学生激动地说：\u201c从来没有老师这么教过我们。这个问题我过去总也搞不懂，经您这样一说我就全懂了。\u201d\n       汉语形象教学法是怎样取得这样好的效果的呢？是通过形象比喻、自我创造、图像显示等十余种方法巧妙地将抽象的理论转换为生动的形象，从而将复杂难懂的问题变得简单、有趣和生动。\n      众所周知，人的大脑分左脑、右脑。左脑是负责逻辑思维、抽象思维、语言学习与运用等；右脑是负责形象思维、联想、图像、音乐、创造性思维、超高速记忆等。右脑的信息容量是左脑的十万倍，但人们平时学习语言却主要使用左脑，将右脑闲置。\n       形象教学法巧妙之处就在于根据人脑的结构理论将抽象变为形象，从而开发了右脑，让全脑配合一起来学习，从而达到三种结果：在理解上茅塞顿开、恍然大悟，在记忆上效率倍增、牢记不忘，在思维上启发创新、开启智慧之门。这实际上也是一种翻译法，正像你和人们说英文人们不懂，你翻译成中文人家就懂了一样。这种教学法不仅适用于海外的中文教学，也特别适合于中国的语文教学。\n       任京生大学中文系毕业，在中国国内曾参加过中央讲师团主教过汉语。2000年赴美国俄亥俄州立大学（Ohio State University）东亚系做访问学者，该校是美国汉语教学界的一面旗帜，全美东亚语言中心、美国国家汉旗舰项目、美国唯一的中文教学法博士点均挂靠在该校。他还在美国西东大学（Seton Hall University）亚洲学系获得对外汉语教学专业硕士学位，并长期在北美一些中文学校等教育机构从事教学工作。另外，他还喜爱发明创造，曾获得过三十多项专利。\n       因此，这套形象教学法，是他根据多年的理论研究、实际教学经验，进行东西方教学比较，运用搞发明的创造性思维，等等多方位跨界，总结出来的一套教学创新成果。他在新出版的《全脑开发学中文\u2014\u2014汉语形象教学宝典》一书中，对此作了全面的阐述。"}]
-         * list1 : []
+         * list : [{"fid":"58C5FC4E-2E1C-41A1-8075-55B804FB8979","fname":"启明星中小学课后辅导","fteacherintroduce":"启明星中小学课后辅导是一家专门针对中小学全科型课后辅导的教育机构，成立于2013年7月，至今已有四年时间。这四年来，通过我们的耐心辅导，大批学生的成绩有了显著提高，同时我们也得到了学生以及家长的充分认可。\n我们本着认真负责的原则，有针对性的对每个孩子进行全面辅导。注重传授学习方法，培养孩子良好的学习习惯，提高孩子的学习成绩。同时采用多种奖励制度，让孩子爱上学习、自主学习，在轻松快乐中学有所获！\n目前机构已经全面开通网络在线小班授课，云集全国重点大学优秀在校大学生加强我们的师资力量，欢迎各位同学加入启明星，为你们的父母交上一份满意的答卷。","fphoto":"12214A7D-0FB3-4D28-A128-2C5A82F87618","fphotopath":"http://api.1000classes.com/youpinserver/attachment/2018-01/12214a7d-0fb3-4d28-a128-2c5a82f87618.jpg","fteachingexp":"","fproducername":"启明星中小学课后辅导","fshareurl":"http://app.1000classes.com/html/org/orgDetail.html?","fsharetitle":"启明星中小学课后辅导","fsharedesc":"启明星中小学课后辅导是一家专门针对中小学全科型课后辅导的教育机构，成立于2013年7月，至今已有四年时间。这四年来，通过我们的耐心辅导，大批学生的成绩有了显著提高，同时我们也得到了学生以及家长的充分认可。\n我们本着认真负责的原则，有针对性的对每个孩子进行全面辅导。注重传授学习方法，培养孩子良好的学习习惯，提高孩子的学习成绩。同时采用多种奖励制度，让孩子爱上学习、自主学习，在轻松快乐中学有所获！\n目前机构已经全面开通网络在线小班授课，云集全国重点大学优秀在校大学生加强我们的师资力量，欢迎各位同学加入启明星，为你们的父母交上一份满意的答卷。"}]
+         * list1 : [{"fid":"D97E571E-2481-4A05-8DE2-5043931205F1","fname":"启明星千课教育盒子","fcoursetypeid":"36968C73-F84B-4F91-B9E3-7853FC0190EB","flearningobj":"千课教育盒子是面向学生专门推出的一款学习\u201c神器\u201d","fmoney":"520.0","fcusttotal":"284","fstorename":"http://api.1000classes.com/youpinserver/attachment/2017-12/e77ec025-2afa-4338-8698-ca187c1cfc31.jpg","flessionnum":"1","fcreatetime":"2017-12-18 16:35:25.103","ftype":"1","fstatus":"1","mark":"75天前","fisauto":"0","fcustname":"没有背景、只有背影","fcustphoto":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ2Ynhnd93otKickwQqf7AJT1BSzZMzJ5EUw8UyWEibe74VQL0kVOJQUsm7doLDggTjJqo0hxEtHl4A/0","rownumber":"1"}]
          * result : 1
          * msg : 成功
-         * totalsize : 0
-         * totalpage : 0
+         * totalsize : 1
+         * totalpage : 1
          */
 
         private int result;
@@ -40,7 +38,7 @@ public class MyFirstFragmentBean extends BaseBean{
         private int totalsize;
         private int totalpage;
         private List<ListBean> list;
-        private List<?> list1;
+        private List<List1Bean> list1;
 
         public int getResult() {
             return result;
@@ -82,36 +80,30 @@ public class MyFirstFragmentBean extends BaseBean{
             this.list = list;
         }
 
-        public List<?> getList1() {
+        public List<List1Bean> getList1() {
             return list1;
         }
 
-        public void setList1(List<?> list1) {
+        public void setList1(List<List1Bean> list1) {
             this.list1 = list1;
         }
 
         public static class ListBean {
             /**
-             * fid : 7708C4D9-A138-41B3-9EC0-7053EC8BB93A
-             * fname : 全脑开发学中文
-             * fteacherintroduce :  无论是海外的中文教学还是中国国内的语文教学，都离不开汉语语音、词法、语法等的教学。有没有一种教学法能够让老师在教学中产生奇效，让学生的学习效率有一极大地提高呢？任京生创造的汉语形象教学法在美国、加拿大、中国的许多国际研讨会、大中小学、教育机构等做过宣讲，引起普遍重视。一些老师说：“我教了几十年中文，也没想到中文还能用这种方法教。”一些学生激动地说：“从来没有老师这么教过我们。这个问题我过去总也搞不懂，经您这样一说我就全懂了。”
-             汉语形象教学法是怎样取得这样好的效果的呢？是通过形象比喻、自我创造、图像显示等十余种方法巧妙地将抽象的理论转换为生动的形象，从而将复杂难懂的问题变得简单、有趣和生动。
-             众所周知，人的大脑分左脑、右脑。左脑是负责逻辑思维、抽象思维、语言学习与运用等；右脑是负责形象思维、联想、图像、音乐、创造性思维、超高速记忆等。右脑的信息容量是左脑的十万倍，但人们平时学习语言却主要使用左脑，将右脑闲置。
-             形象教学法巧妙之处就在于根据人脑的结构理论将抽象变为形象，从而开发了右脑，让全脑配合一起来学习，从而达到三种结果：在理解上茅塞顿开、恍然大悟，在记忆上效率倍增、牢记不忘，在思维上启发创新、开启智慧之门。这实际上也是一种翻译法，正像你和人们说英文人们不懂，你翻译成中文人家就懂了一样。这种教学法不仅适用于海外的中文教学，也特别适合于中国的语文教学。
-             任京生大学中文系毕业，在中国国内曾参加过中央讲师团主教过汉语。2000年赴美国俄亥俄州立大学（Ohio State University）东亚系做访问学者，该校是美国汉语教学界的一面旗帜，全美东亚语言中心、美国国家汉旗舰项目、美国唯一的中文教学法博士点均挂靠在该校。他还在美国西东大学（Seton Hall University）亚洲学系获得对外汉语教学专业硕士学位，并长期在北美一些中文学校等教育机构从事教学工作。另外，他还喜爱发明创造，曾获得过三十多项专利。
-             因此，这套形象教学法，是他根据多年的理论研究、实际教学经验，进行东西方教学比较，运用搞发明的创造性思维，等等多方位跨界，总结出来的一套教学创新成果。他在新出版的《全脑开发学中文——汉语形象教学宝典》一书中，对此作了全面的阐述。
-             * fphoto : BF352ECC-54B9-424C-BF42-2121DEA51E3A
-             * fphotopath : http://api.1000classes.com/youpinserver/attachment/2018-01/bf352ecc-54b9-424c-bf42-2121dea51e3a.jpg
+             * fid : 58C5FC4E-2E1C-41A1-8075-55B804FB8979
+             * fname : 启明星中小学课后辅导
+             * fteacherintroduce : 启明星中小学课后辅导是一家专门针对中小学全科型课后辅导的教育机构，成立于2013年7月，至今已有四年时间。这四年来，通过我们的耐心辅导，大批学生的成绩有了显著提高，同时我们也得到了学生以及家长的充分认可。
+             我们本着认真负责的原则，有针对性的对每个孩子进行全面辅导。注重传授学习方法，培养孩子良好的学习习惯，提高孩子的学习成绩。同时采用多种奖励制度，让孩子爱上学习、自主学习，在轻松快乐中学有所获！
+             目前机构已经全面开通网络在线小班授课，云集全国重点大学优秀在校大学生加强我们的师资力量，欢迎各位同学加入启明星，为你们的父母交上一份满意的答卷。
+             * fphoto : 12214A7D-0FB3-4D28-A128-2C5A82F87618
+             * fphotopath : http://api.1000classes.com/youpinserver/attachment/2018-01/12214a7d-0fb3-4d28-a128-2c5a82f87618.jpg
              * fteachingexp :
-             * fproducername : 全脑开发学中文
+             * fproducername : 启明星中小学课后辅导
              * fshareurl : http://app.1000classes.com/html/org/orgDetail.html?
-             * fsharetitle : 全脑开发学中文
-             * fsharedesc :  无论是海外的中文教学还是中国国内的语文教学，都离不开汉语语音、词法、语法等的教学。有没有一种教学法能够让老师在教学中产生奇效，让学生的学习效率有一极大地提高呢？任京生创造的汉语形象教学法在美国、加拿大、中国的许多国际研讨会、大中小学、教育机构等做过宣讲，引起普遍重视。一些老师说：“我教了几十年中文，也没想到中文还能用这种方法教。”一些学生激动地说：“从来没有老师这么教过我们。这个问题我过去总也搞不懂，经您这样一说我就全懂了。”
-             汉语形象教学法是怎样取得这样好的效果的呢？是通过形象比喻、自我创造、图像显示等十余种方法巧妙地将抽象的理论转换为生动的形象，从而将复杂难懂的问题变得简单、有趣和生动。
-             众所周知，人的大脑分左脑、右脑。左脑是负责逻辑思维、抽象思维、语言学习与运用等；右脑是负责形象思维、联想、图像、音乐、创造性思维、超高速记忆等。右脑的信息容量是左脑的十万倍，但人们平时学习语言却主要使用左脑，将右脑闲置。
-             形象教学法巧妙之处就在于根据人脑的结构理论将抽象变为形象，从而开发了右脑，让全脑配合一起来学习，从而达到三种结果：在理解上茅塞顿开、恍然大悟，在记忆上效率倍增、牢记不忘，在思维上启发创新、开启智慧之门。这实际上也是一种翻译法，正像你和人们说英文人们不懂，你翻译成中文人家就懂了一样。这种教学法不仅适用于海外的中文教学，也特别适合于中国的语文教学。
-             任京生大学中文系毕业，在中国国内曾参加过中央讲师团主教过汉语。2000年赴美国俄亥俄州立大学（Ohio State University）东亚系做访问学者，该校是美国汉语教学界的一面旗帜，全美东亚语言中心、美国国家汉旗舰项目、美国唯一的中文教学法博士点均挂靠在该校。他还在美国西东大学（Seton Hall University）亚洲学系获得对外汉语教学专业硕士学位，并长期在北美一些中文学校等教育机构从事教学工作。另外，他还喜爱发明创造，曾获得过三十多项专利。
-             因此，这套形象教学法，是他根据多年的理论研究、实际教学经验，进行东西方教学比较，运用搞发明的创造性思维，等等多方位跨界，总结出来的一套教学创新成果。他在新出版的《全脑开发学中文——汉语形象教学宝典》一书中，对此作了全面的阐述。
+             * fsharetitle : 启明星中小学课后辅导
+             * fsharedesc : 启明星中小学课后辅导是一家专门针对中小学全科型课后辅导的教育机构，成立于2013年7月，至今已有四年时间。这四年来，通过我们的耐心辅导，大批学生的成绩有了显著提高，同时我们也得到了学生以及家长的充分认可。
+             我们本着认真负责的原则，有针对性的对每个孩子进行全面辅导。注重传授学习方法，培养孩子良好的学习习惯，提高孩子的学习成绩。同时采用多种奖励制度，让孩子爱上学习、自主学习，在轻松快乐中学有所获！
+             目前机构已经全面开通网络在线小班授课，云集全国重点大学优秀在校大学生加强我们的师资力量，欢迎各位同学加入启明星，为你们的父母交上一份满意的答卷。
              */
 
             private String fid;
@@ -203,6 +195,172 @@ public class MyFirstFragmentBean extends BaseBean{
 
             public void setFsharedesc(String fsharedesc) {
                 this.fsharedesc = fsharedesc;
+            }
+        }
+
+        public static class List1Bean {
+            /**
+             * fid : D97E571E-2481-4A05-8DE2-5043931205F1
+             * fname : 启明星千课教育盒子
+             * fcoursetypeid : 36968C73-F84B-4F91-B9E3-7853FC0190EB
+             * flearningobj : 千课教育盒子是面向学生专门推出的一款学习“神器”
+             * fmoney : 520.0
+             * fcusttotal : 284
+             * fstorename : http://api.1000classes.com/youpinserver/attachment/2017-12/e77ec025-2afa-4338-8698-ca187c1cfc31.jpg
+             * flessionnum : 1
+             * fcreatetime : 2017-12-18 16:35:25.103
+             * ftype : 1
+             * fstatus : 1
+             * mark : 75天前
+             * fisauto : 0
+             * fcustname : 没有背景、只有背影
+             * fcustphoto : https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ2Ynhnd93otKickwQqf7AJT1BSzZMzJ5EUw8UyWEibe74VQL0kVOJQUsm7doLDggTjJqo0hxEtHl4A/0
+             * rownumber : 1
+             */
+
+            private String fid;
+            private String fname;
+            private String fcoursetypeid;
+            private String flearningobj;
+            private String fmoney;
+            private String fcusttotal;
+            private String fstorename;
+            private String flessionnum;
+            private String fcreatetime;
+            private String ftype;
+            private String fstatus;
+            private String mark;
+            private String fisauto;
+            private String fcustname;
+            private String fcustphoto;
+            private String rownumber;
+
+            public String getFid() {
+                return fid;
+            }
+
+            public void setFid(String fid) {
+                this.fid = fid;
+            }
+
+            public String getFname() {
+                return fname;
+            }
+
+            public void setFname(String fname) {
+                this.fname = fname;
+            }
+
+            public String getFcoursetypeid() {
+                return fcoursetypeid;
+            }
+
+            public void setFcoursetypeid(String fcoursetypeid) {
+                this.fcoursetypeid = fcoursetypeid;
+            }
+
+            public String getFlearningobj() {
+                return flearningobj;
+            }
+
+            public void setFlearningobj(String flearningobj) {
+                this.flearningobj = flearningobj;
+            }
+
+            public String getFmoney() {
+                return fmoney;
+            }
+
+            public void setFmoney(String fmoney) {
+                this.fmoney = fmoney;
+            }
+
+            public String getFcusttotal() {
+                return fcusttotal;
+            }
+
+            public void setFcusttotal(String fcusttotal) {
+                this.fcusttotal = fcusttotal;
+            }
+
+            public String getFstorename() {
+                return fstorename;
+            }
+
+            public void setFstorename(String fstorename) {
+                this.fstorename = fstorename;
+            }
+
+            public String getFlessionnum() {
+                return flessionnum;
+            }
+
+            public void setFlessionnum(String flessionnum) {
+                this.flessionnum = flessionnum;
+            }
+
+            public String getFcreatetime() {
+                return fcreatetime;
+            }
+
+            public void setFcreatetime(String fcreatetime) {
+                this.fcreatetime = fcreatetime;
+            }
+
+            public String getFtype() {
+                return ftype;
+            }
+
+            public void setFtype(String ftype) {
+                this.ftype = ftype;
+            }
+
+            public String getFstatus() {
+                return fstatus;
+            }
+
+            public void setFstatus(String fstatus) {
+                this.fstatus = fstatus;
+            }
+
+            public String getMark() {
+                return mark;
+            }
+
+            public void setMark(String mark) {
+                this.mark = mark;
+            }
+
+            public String getFisauto() {
+                return fisauto;
+            }
+
+            public void setFisauto(String fisauto) {
+                this.fisauto = fisauto;
+            }
+
+            public String getFcustname() {
+                return fcustname;
+            }
+
+            public void setFcustname(String fcustname) {
+                this.fcustname = fcustname;
+            }
+
+            public String getFcustphoto() {
+                return fcustphoto;
+            }
+
+            public void setFcustphoto(String fcustphoto) {
+                this.fcustphoto = fcustphoto;
+            }
+
+            public String getRownumber() {
+                return rownumber;
+            }
+
+            public void setRownumber(String rownumber) {
+                this.rownumber = rownumber;
             }
         }
     }

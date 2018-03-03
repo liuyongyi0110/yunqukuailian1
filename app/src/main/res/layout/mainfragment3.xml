@@ -13,20 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
-            app:titleTextColor="@android:color/white">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@color/write"
-                android:text="文字"/>
-        </android.support.v7.widget.Toolbar>
-
-
+            app:title="沉浸式（ImmersionBar）"
+            app:titleTextColor="@android:color/white"/>
 
         <TextView
             android:id="@+id/mytext"

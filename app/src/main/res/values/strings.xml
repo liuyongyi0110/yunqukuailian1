@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">yunqukuailian</string>
+    <string name="huoququanxian">权限获取成功</string>
+    <string name="updatetip">更新提示</string>
+    <string name="isclear">是否清除缓存</string>
+    <string name="temporarily_not_update">暂不更新</string>
+    <string name="update_now">立即更新</string>
+
 </resources>

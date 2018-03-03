@@ -14,6 +14,6 @@ import rx.Observable;
  */
 
 public interface CostApi {
-    @PUT("teacherPubCoursePages.do")
+    @PUT("teacherPubCoursePage.do")
     Observable<MyFirstFragmentBean> getTeacherPubCoursePage(@QueryMap Map<String,String> map);
 }

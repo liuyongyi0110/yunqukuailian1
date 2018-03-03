@@ -16,7 +16,7 @@ public class ApiService {
     //超时时间60s
     private static final int DEFAULT_TIMEOUT = 60;
 
-    public static final String ServerPath = "https://api.1000classes.com/youpinserver/"; //服务器接口地址
+    public static final String ServerPath = "http://114.119.10.254:8080/youpinserver/"; //服务器接口地址
 
     private static class Instance{
         private static Retrofit retrofit = createRetrofit();

@@ -5,4 +5,9 @@
     <color name="colorAccent">#FF4081</color>
     <color name="write">#ffffff</color>
     <color name="halfgray">#666666</color>
+    <color name="white">#ffffff</color>
+    <color name="text_title">#464f61</color>
+    <color name="durationtext">#ff7d7d7d</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="activity_bg">#eeeeee</color>
 </resources>

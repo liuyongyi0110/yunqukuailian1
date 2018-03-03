@@ -1,9 +1,7 @@
 package com.yunqukuailian.app;
 
-import android.app.FragmentManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -14,10 +12,10 @@ import com.yunqukuailian.app.fragment.MainFragment1;
 import com.yunqukuailian.app.fragment.MainFragment2;
 import com.yunqukuailian.app.fragment.MainFragment3;
 import com.yunqukuailian.app.fragment.MainFragment4;
+import com.yunqukuailian.app.update.UpdateVersionController;
 import com.yunqukuailian.app.utils.DisplayUtil;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -32,20 +30,30 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.radio4)
     RadioButton radio4;
 
+
+
     private MainFragment1 mainfragment1;
     private MainFragment2 mainfragment2;
     private MainFragment3 mainfragment3;
     private MainFragment4 mainfragment4;
     private FragmentTransaction transaction;
     private static int selection = 0;
+    private boolean isQuit = false;
+    private UpdateVersionController controller = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+    protected void initImmersionBar() {
+        super.initImmersionBar();
+    }
 
+    @Override
+    protected int setLayoutId() {
+        return R.layout.activity_main;
+    }
 
+    @Override
+    protected void initView() {
+        super.initView();
         transaction = getSupportFragmentManager().beginTransaction();  //Activity中
         mainfragment1 = new MainFragment1();
         transaction.add(R.id.fragmentmain, mainfragment1);
@@ -53,8 +61,6 @@ public class MainActivity extends BaseActivity {
         transaction.show(mainfragment1);
         transaction.commit();
     }
-
-
 
     @OnClick({R.id.radio1, R.id.radio2, R.id.radio3, R.id.radio4})
     public void onViewClicked(View view) {
@@ -160,41 +166,41 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setTab(int i) {
-            resetTab();
-            switch (i) {
-                case 0:
-                    Drawable drawable1 = getResources().getDrawable(R.drawable.ic_launcher_background);
-                    drawable1.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
-                    radio1.setCompoundDrawables(null, drawable1, null, null);
-                    radio1.setTextColor(Color.parseColor("#007aff"));
-                    break;
-                case 1:
+        resetTab();
+        switch (i) {
+            case 0:
+                Drawable drawable1 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                drawable1.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
+                radio1.setCompoundDrawables(null, drawable1, null, null);
+                radio1.setTextColor(Color.parseColor("#007aff"));
+                break;
+            case 1:
 
-                    Drawable drawable2 = getResources().getDrawable(R.drawable.ic_launcher_background);
-                    drawable2.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
-                    radio2.setCompoundDrawables(null, drawable2, null, null);
-                    radio2.setTextColor(Color.parseColor("#007aff"));
-                    break;
-                case 2:
-                    Drawable drawable3 = getResources().getDrawable(R.drawable.ic_launcher_background);
-                    drawable3.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
-                    radio3.setCompoundDrawables(null, drawable3, null, null);
-                    radio3.setTextColor(Color.parseColor("#007aff"));
-                    break;
-                case 3:
-                    Drawable drawable4 = getResources().getDrawable(R.drawable.ic_launcher_background);
-                    drawable4.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
-                    radio4.setCompoundDrawables(null, drawable4, null, null);
-                    radio4.setTextColor(Color.parseColor("#007aff"));
-                    break;
-            }
+                Drawable drawable2 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                drawable2.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
+                radio2.setCompoundDrawables(null, drawable2, null, null);
+                radio2.setTextColor(Color.parseColor("#007aff"));
+                break;
+            case 2:
+                Drawable drawable3 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                drawable3.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
+                radio3.setCompoundDrawables(null, drawable3, null, null);
+                radio3.setTextColor(Color.parseColor("#007aff"));
+                break;
+            case 3:
+                Drawable drawable4 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                drawable4.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
+                radio4.setCompoundDrawables(null, drawable4, null, null);
+                radio4.setTextColor(Color.parseColor("#007aff"));
+                break;
+        }
 
 
     }
 
 
     protected void resetTab() {
-        if(radio1 != null){
+        if (radio1 != null) {
             Drawable drawable1 = getResources().getDrawable(R.drawable.ic_launcher_background);
             drawable1.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
             radio1.setCompoundDrawables(null, drawable1, null, null);
@@ -218,5 +224,48 @@ public class MainActivity extends BaseActivity {
         }
 
     }
+
+    @Override
+    public void onBackPressed() {
+        if (!isQuit) {
+            showToast("再按一次退出程序");
+            isQuit = true;
+
+            //这段代码意思是,在两秒钟之后isQuit会变成false
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
+                        isQuit = false;
+                    }
+                }
+            }).start();
+
+
+        } else {
+            System.exit(0);
+        }
+    }
+
+    public void update() {
+        //现获取sdcard的读写权限
+        checkPer();
+
+        //下载
+//        if (false) {
+//           //强更
+//            controller.forceCheckUpdateInfo(Integer.parseInt(remarkBean.getMap().getList().get(0).getFnum()), remarkBean.getMap().getList().get(0).getFdesc(),  remarkBean.getMap().getList().get(0).getFurl());
+//        } else {
+//            if (!TextUtils.isEmpty(remarkBean.getMap().getList().get(0).getFnum()) && Integer.parseInt(remarkBean.getMap().getList().get(0).getFnum()) > UpdateVersionController.getVerCode(MainActivity.this)) {
+//                //非强更
+//                controller.normalCheckUpdateInfo(Integer.parseInt(remarkBean.getMap().getList().get(0).getFnum()), remarkBean.getMap().getList().get(0).getFdesc(),  remarkBean.getMap().getList().get(0).getFurl());
+//            }
+//        }
+    }
+
 
 }

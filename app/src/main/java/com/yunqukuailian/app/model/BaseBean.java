@@ -5,7 +5,7 @@ package com.yunqukuailian.app.model;
  */
 
 public class BaseBean {
-
+    //http://114.119.10.254:8080/youpinserver/teacherPubCoursePage.do?fteacherid=58C5FC4E-2E1C-41A1-8075-55B804FB8979&pageindex=1&pagesize=10&ftype=1
     /**
      * map : {"result":1,"msg":"成功"}
      */

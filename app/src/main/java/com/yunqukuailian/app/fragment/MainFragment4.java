@@ -21,30 +21,27 @@ import butterknife.Unbinder;
 public class MainFragment4 extends BaseFragment {
     @BindView(R.id.mytext)
     TextView mytext;
-    Unbinder unbinder;
+
     private View view;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        view = LayoutInflater.from(getActivity()).inflate(R.layout.mainfragment1, container, false);
-        unbinder = ButterKnife.bind(this, view);
-        initView();
-        return view;
+    public int setLayout() {
+        return R.layout.mainfragment4;
     }
 
-
+    @Override
     public void initView() {
+        super.initView();
         mytext.setText(MainFragment4.class.getName());
     }
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unbinder.unbind();
+
     }
 
 
