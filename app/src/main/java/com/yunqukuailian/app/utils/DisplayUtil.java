@@ -2,9 +2,6 @@ package com.yunqukuailian.app.utils;
 
 import android.content.Context;
 
-/**
- * Created by Administrator on 2018/3/1/001.
- */
 
 public class DisplayUtil {
     /**

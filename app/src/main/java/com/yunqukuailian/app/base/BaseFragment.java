@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -69,5 +70,11 @@ public abstract class BaseFragment extends Fragment {
         mImmersionBar.init();
     }
 
+    public void backgroundAlpha(float bgAlpha)
+    {
+        WindowManager.LayoutParams lp = getActivity().getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getActivity().getWindow().setAttributes(lp);
+    }
 
 }

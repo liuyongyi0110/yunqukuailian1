@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">yunqukuailian</string>
+    <string name="app_name">云区块链</string>
     <string name="huoququanxian">权限获取成功</string>
     <string name="updatetip">更新提示</string>
     <string name="isclear">是否清除缓存</string>
@@ -9,5 +10,4 @@
     <string name="finance">财务</string>
     <string name="transaction">交易</string>
     <string name="quotation">行情</string>
-
 </resources>

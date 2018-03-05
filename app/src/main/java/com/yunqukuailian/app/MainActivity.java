@@ -29,8 +29,8 @@ public class MainActivity extends BaseActivity {
     RadioButton radio3;
     @BindView(R.id.radio4)
     RadioButton radio4;
-
-
+    @BindView(R.id.trans)
+    public View trans;
 
     private MainFragment1 mainfragment1;
     private MainFragment2 mainfragment2;
