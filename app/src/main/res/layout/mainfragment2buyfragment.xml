@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:divider="@drawable/baseline"
+    android:background="@color/activity_bg"
+    android:showDividers="middle"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/mainfragment2buyfragmentleft"/>
+
+    <include layout="@layout/mainfragment2buyfragmentright"/>
+
+</LinearLayout>
