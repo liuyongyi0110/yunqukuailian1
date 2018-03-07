@@ -32,5 +32,13 @@
         <item name="android:backgroundDimAmount">0.5</item>
     </style>
 
+    <style name="radiobuttonstyle">
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/halfgray</item>
+    </style>
+
 
 </resources>

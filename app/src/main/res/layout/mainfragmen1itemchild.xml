@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/activity_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:showDividers="middle"
+       android:divider="@drawable/baseline"
+       android:orientation="horizontal">
+
+      <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:layout_weight="1">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="最高价"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="10500.00"/>
+
+   </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="center"
+          android:layout_weight="1">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="最低价"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="9669.17"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="center"
+          android:layout_weight="1">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="成交量"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="949.8840"/>
+
+      </LinearLayout>
+
+   </LinearLayout>
+
+   <RadioGroup
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="5dp"
+       android:paddingLeft="12dp"
+       android:paddingRight="12dp"
+       android:paddingBottom="5dp"
+       android:orientation="horizontal">
+      <RadioButton
+          android:id="@+id/timeminute"
+          android:layout_width="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:button="@null"
+          style="@style/radiobuttonstyle"
+          android:background="@color/red"
+          android:text="分时"
+          android:layout_height="wrap_content" />
+      <RadioButton
+          android:id="@+id/timeminute15"
+          android:layout_width="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          style="@style/radiobuttonstyle"
+          android:button="@null"
+          android:text="15分"
+          android:layout_height="wrap_content" />
+      <RadioButton
+          android:id="@+id/timehour"
+          android:layout_width="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          style="@style/radiobuttonstyle"
+          android:button="@null"
+          android:text="时K"
+          android:layout_height="wrap_content" />
+      <RadioButton
+          android:id="@+id/timeday"
+          android:layout_width="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:button="@null"
+          style="@style/radiobuttonstyle"
+          android:text="日K"
+          android:layout_height="wrap_content" />
+      <RadioButton
+          android:id="@+id/timeweek"
+          android:layout_width="match_parent"
+          android:layout_weight="1"
+          android:button="@null"
+          style="@style/radiobuttonstyle"
+          android:text="周K"
+          android:gravity="center"
+          android:layout_height="wrap_content" />
+   </RadioGroup>
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="166dp"
+       android:scaleType="fitXY"
+       android:src="@drawable/mainfragment1child" />
+
+</LinearLayout>

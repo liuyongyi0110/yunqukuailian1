@@ -80,7 +80,8 @@ public class MainFragment2 extends BaseFragment {
         for (int i = 0; i < 15; i++) {
             MainFragmenPopupBean bean = new MainFragmenPopupBean();
             bean.setName("测试数据" + i);
-            bean.setPic("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520266903890&di=be30eca72ae46e746fcf4cb7426e474c&imgtype=0&src=http%3A%2F%2Fwww.iapps.im%2Fpublic%2Fuploadfiles%2Ficons%2Fb1de8ce2f3733d2125fea9eb17ec9798.jpg");
+            bean.setPic("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520266903890&di=be30eca72ae46e746fcf4cb7426e474c&" +
+                    "imgtype=0&src=http%3A%2F%2Fwww.iapps.im%2Fpublic%2Fuploadfiles%2Ficons%2Fb1de8ce2f3733d2125fea9eb17ec9798.jpg");
             popupList.add(bean);
         }
     }

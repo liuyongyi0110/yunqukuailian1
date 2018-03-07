@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="12dp"
+    android:background="@color/white"
+    android:paddingRight="12dp"
+    android:layout_height="80dp">
+        <TextView
+            android:id="@+id/mainfragmen1text3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circlered"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:text="卖"/>
+        <TextView
+            android:id="@+id/selltext4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="委托价"
+            android:layout_toRightOf="@+id/mainfragmen1text3"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$20"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/selltext4"
+            android:layout_toRightOf="@+id/mainfragmen1text3"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="成交价"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/transaction"
+            android:text="$20.96"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="85dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/redradiobg"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="+2.98%"/>
+
+
+</RelativeLayout>

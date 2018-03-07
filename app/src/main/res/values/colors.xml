@@ -11,5 +11,5 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="activity_bg">#eeeeee</color>
     <color name="black">#000000</color>
-    <color name="red">#ff524c</color>
+    <color name="red">#ff0000</color>
 </resources>
