@@ -3,6 +3,7 @@ package com.yunqukuailian.app.fragment;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -43,8 +44,6 @@ import butterknife.Unbinder;
  */
 
 public class MainFragment2 extends BaseFragment {
-    @BindView(R.id.mainfragment2title)
-    TextView mainfragment2title;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     Unbinder unbinder;
@@ -52,6 +51,8 @@ public class MainFragment2 extends BaseFragment {
     TabPageIndicator indicator;
     @BindView(R.id.viewPager)
     ViewPager viewPager;
+    @BindView(R.id.mainfragment4title)
+    TextView mainfragment4title;
     private View trans;
     private MainActivity activity;
 
@@ -94,11 +95,11 @@ public class MainFragment2 extends BaseFragment {
     @Override
     public void initView() {
         super.initView();
-        mainfragment2title.setText("BTCX市场");
-
-
+        mainfragment4title.setText("BTCX市场");
+        Drawable drawable1 = getResources().getDrawable(R.drawable.mainfragmentitledown);
+        drawable1.setBounds(0, 0, DisplayUtil.dip2px(getActivity(), 15), DisplayUtil.dip2px(getActivity(), 10));
+        mainfragment4title.setCompoundDrawables(null, null, drawable1, null);
         BasePagerAdapter adapter = new BasePagerAdapter(getActivity().getSupportFragmentManager());
-
         viewPager.setAdapter(adapter);// 设置adapter
         indicator.setViewPager(viewPager);// 绑定indicator
 
@@ -125,9 +126,12 @@ public class MainFragment2 extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick(R.id.mainfragment2title)
+    @OnClick(R.id.mainfragment4title)
     public void onViewClicked() {
         trans.setVisibility(View.VISIBLE);
+        Drawable drawable1 = getResources().getDrawable(R.drawable.mainfragmenttitleup);
+        drawable1.setBounds(0, 0, DisplayUtil.dip2px(getActivity(), 15), DisplayUtil.dip2px(getActivity(), 10));
+        mainfragment4title.setCompoundDrawables(null, null, drawable1, null);
         showPopuWindow();
     }
 
@@ -148,6 +152,9 @@ public class MainFragment2 extends BaseFragment {
             @Override
             public void onDismiss() {
                 trans.setVisibility(View.GONE);
+                Drawable drawable1 = getResources().getDrawable(R.drawable.mainfragmentitledown);
+                drawable1.setBounds(0, 0, DisplayUtil.dip2px(getActivity(), 15), DisplayUtil.dip2px(getActivity(), 10));
+                mainfragment4title.setCompoundDrawables(null, null, drawable1, null);
             }
         });
     }
@@ -160,7 +167,9 @@ public class MainFragment2 extends BaseFragment {
         adapter.setOnItemClickLister(new MainFragmen2PopupWindowAdapter.OnItemClickLister() {
             @Override
             public void setOnClick(int i) {
-                showToast("  " + i);
+                window.dismiss();
+                showToast(" 更换数据 " + i);
+
             }
         });
     }
@@ -172,17 +181,16 @@ public class MainFragment2 extends BaseFragment {
         indicator.setIndicatorMode(TabPageIndicator.IndicatorMode.MODE_NOWEIGHT_EXPAND_SAME);// 设置模式，一定要先设置模式
 //        indicator.setDividerColor(Color.parseColor("#00bbcf"));// 设置分割线的颜色
         indicator.setDividerPadding(10);//设置
-        indicator.setIndicatorColor(Color.parseColor("#007aff"));// 设置底部导航线的颜色
-        indicator.setTextColorSelected(Color.parseColor("#007aff"));// 设置tab标题选中的颜色
+        indicator.setIndicatorColor(Color.parseColor("#1DAAFC"));// 设置底部导航线的颜色
+        indicator.setTextColorSelected(Color.parseColor("#1DAAFC"));// 设置tab标题选中的颜色
         indicator.setTextColor(Color.parseColor("#797979"));// 设置tab标题未被选中的颜色
-        indicator.setTextSize(DisplayUtil.sp2px(getActivity(),14));// 设置字体大小
-        indicator.setIndicatorHeight(DisplayUtil.sp2px(getActivity(),2));
+        indicator.setTextSize(DisplayUtil.sp2px(getActivity(), 14));// 设置字体大小
+        indicator.setIndicatorHeight(DisplayUtil.sp2px(getActivity(), 2));
     }
 
 
-
     class BasePagerAdapter extends FragmentStatePagerAdapter {
-        String[] titles={"买入","卖出","当前委托","历史委托"};
+        String[] titles = {"买入", "卖出", "当前委托", "历史委托"};
 
         public BasePagerAdapter(FragmentManager fm) {
             super(fm);

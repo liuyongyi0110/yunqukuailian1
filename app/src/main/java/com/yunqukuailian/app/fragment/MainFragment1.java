@@ -3,20 +3,24 @@ package com.yunqukuailian.app.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.yunqukuailian.app.R;
+import com.yunqukuailian.app.activity.TransactionDetailsActivity;
 import com.yunqukuailian.app.adapter.MainFragmentAdapter;
 import com.yunqukuailian.app.base.BaseFragment;
-import com.yunqukuailian.app.http.ApiService;
-import com.yunqukuailian.app.http.CostApi;
+import com.yunqukuailian.app.http.AbsAPICallback;
+import com.yunqukuailian.app.http.LocalService;
+import com.yunqukuailian.app.model.ChartData;
 import com.yunqukuailian.app.model.MainFragment1Bean;
-import com.yunqukuailian.app.model.MyFirstFragmentBean;
+import com.yunqukuailian.app.utils.JumpUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,6 +39,8 @@ import rx.schedulers.Schedulers;
  */
 
 public class MainFragment1 extends BaseFragment {
+    @BindView(R.id.mainfragment4title)
+    TextView mainfragment4title;
     private List<MainFragment1Bean> list = new ArrayList<>();
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -78,10 +84,12 @@ public class MainFragment1 extends BaseFragment {
     @Override
     public void initView() {
         super.initView();
-        adapter = new MainFragmentAdapter(getActivity(),list);
+        mainfragment4title.setText("BTCX市场");
+        adapter = new MainFragmentAdapter(getActivity(), list, getActivity());
         mainfragment1expandablelist.setGroupIndicator(null);
         mainfragment1expandablelist.setAdapter(adapter);
-        mainfragment1expandablelist.expandGroup(0);
+
+//        mainfragment1expandablelist.expandGroup(0);
         //设置只展开一个view
         mainfragment1expandablelist.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
@@ -94,30 +102,43 @@ public class MainFragment1 extends BaseFragment {
                 }
             }
         });
+        mainfragment1expandablelist.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                JumpUtils.JumpActivity(getActivity(), TransactionDetailsActivity.class);
+                return true;
+            }
+        });
 
-        Map<String, String> map = new HashMap<>();
-        map.put("fteacherid", "58C5FC4E-2E1C-41A1-8075-55B804FB8979");
-        map.put("pageindex", "1");
-        map.put("pagesize", "10");
-        map.put("ftype", "1");
-        ApiService.getInstance().create(CostApi.class).getTeacherPubCoursePage(map)
-                .subscribeOn(Schedulers.newThread())
+        Map<String,String> parm = new HashMap<>();
+        parm.put("market","24");
+        parm.put("lineType","1");
+        parm.put("limit","100");
+        LocalService.getApi().getHealthClassify(parm)
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<MyFirstFragmentBean>() {
+                .subscribe(new AbsAPICallback<ChartData>() {
                     @Override
-                    public void call(MyFirstFragmentBean baseBean) {
-                        //请求成功
-//                        mytext.setText(baseBean.getMap().getList().get(0).getFteacherintroduce());
+                    protected void onDone(ChartData bean) {
+
+                        //请求成功，做相应的页面操作
+                      showToast("成功");
+//                        for (int i = 0; i < bean.getData().length; i++) {
+//                            for (int j = 0; j < bean.getData()[i].length; j++) {
+//                                Log.e("yongyi",bean.getData()[i][j]);
+//                            }
+//                        }
+
                     }
-                }, new Action1<Throwable>() {
+
                     @Override
-                    public void call(Throwable throwable) {
-                        //请求失败
-//                        mytext.setText("请求数据失败");
+                    public void onError(Throwable e) {
+                        super.onError(e);
+                        //e.getMessage() 可获取服务器返回错误信息
+                        showToast("失败");
                     }
                 });
-
-
 
     }
 

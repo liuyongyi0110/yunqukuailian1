@@ -15,8 +15,6 @@ import butterknife.BindView;
  */
 
 public class MainFragment2HistoryFragment extends BaseFragment {
-    @BindView(R.id.mytext)
-    TextView mytext;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,7 +29,6 @@ public class MainFragment2HistoryFragment extends BaseFragment {
     @Override
     public void initView() {
         super.initView();
-        mytext.setText(MainFragment2HistoryFragment.class.getName());
     }
     @Override
     public void onDestroy() {

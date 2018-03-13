@@ -15,8 +15,7 @@ import butterknife.BindView;
  */
 
 public class MainFragment2BuyFragment extends BaseFragment {
-    @BindView(R.id.mytext)
-    TextView mytext;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,13 +24,13 @@ public class MainFragment2BuyFragment extends BaseFragment {
 
     @Override
     public int setLayout() {
-        return R.layout.mainfragment4;
+        return R.layout.mainfragment2buyfragment;
     }
 
     @Override
     public void initView() {
         super.initView();
-        mytext.setText(MainFragment2BuyFragment.class.getName());
+
     }
     @Override
     public void onDestroy() {

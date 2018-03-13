@@ -14,9 +14,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/quotation"
+        style="@style/textstylemiddleblack"
         android:gravity="center"
-
-        android:drawableBottom="@mipmap/ic_launcher"
+        android:drawableTop="@drawable/main_market_select"
         android:button="@null"/>
     <RadioButton
         android:id="@+id/radio2"
@@ -24,8 +24,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/transaction"
+        style="@style/textstylemiddleblack"
         android:gravity="center"
-        android:drawableBottom="@mipmap/ic_launcher"
+        android:drawableTop="@drawable/main_trading"
         android:button="@null"/>
     <RadioButton
         android:id="@+id/radio3"
@@ -33,8 +34,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/finance"
+        style="@style/textstylemiddleblack"
         android:gravity="center"
-        android:drawableBottom="@mipmap/ic_launcher"
+        android:drawableTop="@drawable/main_financial"
         android:button="@null"/>
     <RadioButton
         android:id="@+id/radio4"
@@ -43,7 +45,8 @@
         android:layout_weight="1"
         android:text="@string/personal"
         android:gravity="center"
-        android:drawableBottom="@mipmap/ic_launcher"
+        style="@style/textstylemiddleblack"
+        android:drawableTop="@drawable/main_icon"
         android:button="@null"/>
 
 </RadioGroup>

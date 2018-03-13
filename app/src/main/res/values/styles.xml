@@ -40,5 +40,100 @@
         <item name="android:textColor">@color/halfgray</item>
     </style>
 
+    <style name="edithintstyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black3</item>
+        <item name="android:textColorHint">@color/gray</item>
+
+    </style>
+
+    <style name="textstylelagerblack">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black3</item>
+
+    </style>
+    <style name="textstylemiddleblack">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black3</item>
+
+    </style>
+
+    <style name="textstylesmallblack">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black3</item>
+
+    </style>
+
+    <style name="textstylelagerwhite">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+    <style name="textstylemiddlewhite">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/write</item>
+
+    </style>
+
+    <style name="textstylesmallwhite">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/write</item>
+
+    </style>
+
+    <style name="textstylelagerred">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/red</item>
+
+    </style>
+    <style name="textstylemiddlered">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/red</item>
+
+    </style>
+
+    <style name="textstylesmallred">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/red</item>
+
+    </style>
+
+
+    <style name="textstylelagergray">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grays</item>
+
+    </style>
+    <style name="textstylemiddlegray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grays</item>
+
+    </style>
+
+    <style name="textstylesmallgray">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/grays</item>
+
+    </style>
+
+
+    <style name="textstylelagergreen">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/greencolor</item>
+
+    </style>
+    <style name="textstylemiddlegreen">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/greencolor</item>
+
+    </style>
+
+    <style name="textstylesmallgreen">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/greencolor</item>
+
+    </style>
+
+
 
 </resources>

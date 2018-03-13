@@ -11,6 +11,8 @@ public class JumpUtils {
     public static String FIRSTTAG ="FIRSTTAG";
     public static String TYPE = "TYPE";
     public static String PIC = "PICTURE";
+    public static int REQUESTCODE = 1001;
+    public static int RESULTCODE = 1001;
 
     public static void JumpActivity(Context context, Class<? extends Activity> toActivity){
         Intent intent = new Intent(context,toActivity);

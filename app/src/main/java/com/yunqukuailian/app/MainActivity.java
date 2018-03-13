@@ -70,7 +70,6 @@ public class MainActivity extends BaseActivity {
                 if (mainfragment1 == null) {
                     mainfragment1 = new MainFragment1();
                     transaction.add(R.id.fragmentmain, mainfragment1);
-                    transaction.show(mainfragment1);
                 }
                 transaction.show(mainfragment1);
                 if (mainfragment2 != null) {
@@ -93,7 +92,6 @@ public class MainActivity extends BaseActivity {
                 if (mainfragment2 == null) {
                     mainfragment2 = new MainFragment2();
                     transaction.add(R.id.fragmentmain, mainfragment2);
-
                 }
                 transaction.show(mainfragment2);
                 if (mainfragment1 != null) {
@@ -105,7 +103,7 @@ public class MainActivity extends BaseActivity {
                 }
 
                 if (mainfragment4 != null) {
-                    transaction.hide(mainfragment2);
+                    transaction.hide(mainfragment4);
                 }
                 transaction.commit();
                 setSelect(1);
@@ -115,9 +113,7 @@ public class MainActivity extends BaseActivity {
                 if (mainfragment3 == null) {
                     mainfragment3 = new MainFragment3();
                     transaction.add(R.id.fragmentmain, mainfragment3);
-
                 }
-
                 transaction.show(mainfragment3);
                 if (mainfragment1 != null) {
                     transaction.hide(mainfragment1);
@@ -130,8 +126,6 @@ public class MainActivity extends BaseActivity {
                 if (mainfragment4 != null) {
                     transaction.hide(mainfragment4);
                 }
-
-
                 transaction.commit();
                 setSelect(2);
                 selection = 2;
@@ -169,29 +163,29 @@ public class MainActivity extends BaseActivity {
         resetTab();
         switch (i) {
             case 0:
-                Drawable drawable1 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                Drawable drawable1 = getResources().getDrawable(R.drawable.main_market_select);
                 drawable1.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
                 radio1.setCompoundDrawables(null, drawable1, null, null);
-                radio1.setTextColor(Color.parseColor("#007aff"));
+                radio1.setTextColor(Color.parseColor("#1DAAFC"));
                 break;
             case 1:
 
-                Drawable drawable2 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                Drawable drawable2 = getResources().getDrawable(R.drawable.main_trading_select);
                 drawable2.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
                 radio2.setCompoundDrawables(null, drawable2, null, null);
-                radio2.setTextColor(Color.parseColor("#007aff"));
+                radio2.setTextColor(Color.parseColor("#1DAAFC"));
                 break;
             case 2:
-                Drawable drawable3 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                Drawable drawable3 = getResources().getDrawable(R.drawable.main_financial_select);
                 drawable3.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
                 radio3.setCompoundDrawables(null, drawable3, null, null);
-                radio3.setTextColor(Color.parseColor("#007aff"));
+                radio3.setTextColor(Color.parseColor("#1DAAFC"));
                 break;
             case 3:
-                Drawable drawable4 = getResources().getDrawable(R.drawable.ic_launcher_background);
+                Drawable drawable4 = getResources().getDrawable(R.drawable.main_icon_select);
                 drawable4.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
                 radio4.setCompoundDrawables(null, drawable4, null, null);
-                radio4.setTextColor(Color.parseColor("#007aff"));
+                radio4.setTextColor(Color.parseColor("#1DAAFC"));
                 break;
         }
 
@@ -201,19 +195,19 @@ public class MainActivity extends BaseActivity {
 
     protected void resetTab() {
         if (radio1 != null) {
-            Drawable drawable1 = getResources().getDrawable(R.drawable.ic_launcher_background);
+            Drawable drawable1 = getResources().getDrawable(R.drawable.main_market);
             drawable1.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
             radio1.setCompoundDrawables(null, drawable1, null, null);
 
-            Drawable drawable2 = getResources().getDrawable(R.drawable.ic_launcher_background);
+            Drawable drawable2 = getResources().getDrawable(R.drawable.main_trading);
             drawable2.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
             radio2.setCompoundDrawables(null, drawable2, null, null);
 
-            Drawable drawable3 = getResources().getDrawable(R.drawable.ic_launcher_background);
+            Drawable drawable3 = getResources().getDrawable(R.drawable.main_financial);
             drawable3.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
             radio3.setCompoundDrawables(null, drawable3, null, null);
 
-            Drawable drawable4 = getResources().getDrawable(R.drawable.ic_launcher_background);
+            Drawable drawable4 = getResources().getDrawable(R.drawable.main_icon);
             drawable4.setBounds(0, 0, DisplayUtil.dip2px(this, 22), DisplayUtil.dip2px(this, 22));
             radio4.setCompoundDrawables(null, drawable4, null, null);
 

@@ -4,11 +4,15 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:divider="@drawable/baseline"
-    android:background="@color/activity_bg"
     android:showDividers="middle"
     android:layout_height="match_parent">
 
     <include layout="@layout/mainfragment2buyfragmentleft"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/baseline"/>
 
     <include layout="@layout/mainfragment2buyfragmentright"/>
 
